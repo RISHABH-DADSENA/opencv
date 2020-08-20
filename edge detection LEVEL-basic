@@ -1,0 +1,11 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img=cv2.imread(r"C:\Users\hp\Pictures\narendra.jpg",0)
+g_blur=cv2.GaussianBlur(img,(5,5),1)
+edges=cv2.Canny(g_blur,100,200)
+cv2.imshow("Gaussian blur",g_blur)
+cv2.imshow("canny",edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
